@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "axxonAdmin"
+    }
+  },
+  "defaultProject": "axxonAdmin",
+  "cli": {
+    "analytics": false
+  }
 }
