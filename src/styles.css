@@ -1,1 +1,227 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,100;1,500&display=swap');
+
+/*
+==========================================================
+Reset Css
+==========================================================
+*/
+
+html, body {height: 100%;}
+body {margin:0; background:#237FD9; color:#2E2E2E; font-family: 'Montserrat', sans-serif; font-weight:400; font-size:16px; overflow-x:hidden;}
+h1, h2, h3, h4, h5, h6 {font-weight:700; line-height: normal;}
+ul {margin:0; padding:0;}
+h1 {font-size:44px;}
+h2 {font-size:36px;}
+h3 {font-size:30px;}
+h4 {font-size:18px;}
+p {font-size:16px; color:#131313;}
+a {color:#131313;}
+a:hover, a:focus {text-decoration:none;}
+label {font-size:16px; line-height:18px; font-weight:600; margin-bottom:.3rem;}
+/*
+==========================================================
+Default Css
+==========================================================
+*/
+.form-group {margin-bottom:20px;}
+.form-control {min-height:50px; border-radius:11px; border:2px solid #E8E8E8; background:#fff; font-size:19px; color:#2E2E2E;}
+select {-webkit-appearance: none;}
+button:hover, button:focus {
+	box-shadow:none!important; outline:none!important; 
+}
+.btn {padding:.475rem 1rem .4rem; min-width:110px; font-size:17px; text-align:center;}
+.btn-lg {height:54px; border-radius:11px; font-size:20px; font-weight:400;}
+.btn-primary {background-color:#237FD9; border-color:#237FD9; color:#fff; cursor:pointer;}
+.btn-secondary {min-width: 125px; background-color: #e6effd; border-color: #e6effd; color: #007cff; font-size: 18px;}
+.btn-secondary i {position: relative; top:-1px; margin-right:10px;}
+.btn-primary:hover, .btn-primary:focus {
+    color: #fff;
+    background-color: #195A99;
+    border-color: #195A99;
+}
+ 
+
+/** Input Css**/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] { 
+    -moz-appearance:textfield; 
+} 
+label input[type="radio"] {
+	opacity:0;
+}
+textarea {min-height:114px;}
+sub, sup {font-size:18px; top:-2px;}
+/** Placeholder Input **/
+::placeholder { 
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #989898;
+  opacity: 1;
+}
+:-ms-input-placeholder { 
+/* Internet Explorer 10-11 */
+  color: #989898;
+}
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+  color: #989898;
+}
+
+hr {border-color:#e7ebf3;}
+
+/**Custom Radio css**/
+[type="radio"] {
+  border: 0;
+  height: 1px; margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* the basic, unchecked style */
+[type="radio"] + span:before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 1em;        
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 0 2px #000;   
+  margin-right: 0.75em;
+  -webkit-transition: 0.5s ease all;   
+  transition: 0.5s ease all;   
+} 
+/* the checked style using the :checked pseudo class */
+[type="radio"]:checked + span:before {
+  background: #000;
+  box-shadow: 0 0 0 2px #000;
+}
+
+.table-fixed {table-layout: fixed;}
+.badge {padding-top: 5px;}
+
+/** Custom Input Checkbox **/
+.control {display: block; position: relative; padding-left:40px; cursor: pointer; line-height:normal; font-size: 18px;
+  margin: 0; }
+.control input {position:absolute; z-index:-1; opacity: 0; }
+.control__indicator {position:absolute; top:-2px; left: 0; height: 20px; width: 20px; background: #fff; border:2px solid #007cff;}
+.control--radio .control__indicator {border-radius: 50%; }
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+.control input:checked ~ .control__indicator {
+  background: #007cff;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #007cff;
+}
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--checkbox input:checked ~ span {
+	color:#131313;
+}
+.control--checkbox .control__indicator:after {
+  left: 5px;
+  top: 0px;
+  width: 6px;
+  height: 13px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control--checkbox span {color:#898989;}
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+  background: #7b7b7b;
+}
+
+@media (max-width:1440px){
+	h1 {font-size:40px;}
+	h2 {font-size:32px;}
+	.form-group {margin-bottom:15px;}
+	.form-control {min-height:46px; border-radius:10px; font-size:17px;}
+}
+@media (max-width:1440px){
+	h2 {font-size:30px;}
+	.btn-lg {font-size:18px;}
+}
+
+
+/** Login CSS **/
+.front-forms {height:100%; display:flex; align-items:center; position:relative; overflow-x: hidden;}
+.front-forms:before {
+	content:'';
+	background:url(assets/img/wave_bg.svg);
+	background-repeat:no-repeat;
+	background-size:100%;
+	position:absolute;
+	right:-2%;
+	top:-9%;
+	padding:17%;
+}
+.front-logo {margin:0 0 25px;}
+.front-logo img {width:190px;}
+.login_box {max-width:560px; margin:30px auto;}
+.form-box {width:100%; background:#EFF7FF; padding:30px 50px 50px; border-radius:10px;}
+.form-box h2 {margin-bottom:30px;}
+.form-box label {font-size:17px; text-align:left; font-weight:300; color:#2E2E2E; margin:0 0 7px; }
+.form-box a {font-size:18px; font-weight:400; color:#2E2E2E;}
+.form-box a:hover {color:#237FD9;}
+
+@media (max-height:550px){
+	.front-forms { align-items:self-start;}
+}
+
+@media (max-width:1440px){
+.login_box {margin:15px auto;}
+.front-logo {margin:0 0 20px;}
+.form-box h2 {margin-bottom:20px;}
+.login_box {max-width:500px}
+.form-box a, .form-box label {font-size:16px;}
+.front-logo img {width:160px;}
+.form-box {padding:25px 35px 35px;}
+}
+
+@media (max-width:991px){
+	.login_box {max-width:64%;}
+	.front-logo img {width:150px;}
+	.front-forms:before{
+		padding: 22%;
+	}
+}
+
+@media (max-width:767px){
+	.login_box {max-width:85%;}
+}
+
+@media (max-width:575px){
+	.login_box {max-width:100%;}
+	.form-box {padding:25px;}
+	.form-box p br {display:none;}
+}
+/* Login CSS ends */

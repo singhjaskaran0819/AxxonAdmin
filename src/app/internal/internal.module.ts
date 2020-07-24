@@ -18,11 +18,14 @@ import { AddSponsorComponent } from './add-sponsor/add-sponsor.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { InternalComponent } from './internal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [UsersComponent, InternalComponent, PartnersComponent, TherapistsComponent, NewsComponent, AddNewsComponent, EditTherapistComponent, EditUserComponent, SponsorComponent, UserDetailsComponent, TherapistDetailsComponent, AddPartnerComponent, AddSponsorComponent, DashboardComponent, SidebarComponent],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     InternalRoutingModule
   ],
   providers: [
